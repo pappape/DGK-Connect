@@ -36,7 +36,7 @@ class CloudflareApp:
         self.server_list_window = self.canvas.create_window(150, 160, window=self.server_list_label)  # リストラベルをキャンバスに配置
 
         # バージョン情報と著作権情報をキャンバスに追加
-        self.info_label1 = tk.Label(root, text="DGK Server Connect 1.0", fg="gray")
+        self.info_label1 = tk.Label(root, text="DGK Server Connect 1.0.1", fg="gray")
         self.info_label2 = tk.Label(root, text="Copyright © 2024 pappape. All rights reserved.", fg="gray")
         self.canvas.create_window(150, 340, window=self.info_label2)  # 著作権ラベルをキャンバスに配置
         self.canvas.create_window(150, 310, window=self.info_label1)  # バージョンラベルをキャンバスに配置
@@ -74,7 +74,7 @@ class CloudflareApp:
             
             for hostname, local_url in servers:
                 process = subprocess.Popen(
-                    ["cloudflared", "access", "rdp", "--hostname", hostname, "--url", local_url],
+                    ["cloudflared", "access", "tcp", "--hostname", hostname, "--url", local_url],
                     stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL  # 出力を無効化
                 )
                 self.processes.append(process)

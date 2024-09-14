@@ -2,7 +2,7 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "DGK Connect"
-#define MyAppVersion "1.0"
+#define MyAppVersion "1.0.1"
 #define MyAppPublisher "pappape"
 #define MyAppURL "https://github.com/pappape/DGK-Connect"
 #define MyAppExeName "DGK_Connect.exe"
@@ -10,7 +10,7 @@
 [Setup]
 ; NOTE: The value of AppId uniquely identifies this application. Do not use the same AppId value in installers for other applications.
 ; (To generate a new GUID, click Tools | Generate GUID inside the IDE.)
-AppId={{0566A968-07BC-48AF-BC69-624D4897E741}
+AppId={{7CD25AB1-26AA-416F-92EB-B5D955AD91FE}
 AppName={#MyAppName}
 AppVersion={#MyAppVersion}
 ;AppVerName={#MyAppName} {#MyAppVersion}
@@ -31,7 +31,7 @@ DisableProgramGroupPage=yes
 ; Remove the following line to run in administrative install mode (install for all users.)
 PrivilegesRequired=lowest
 OutputBaseFilename=DGK_Connect
-SetupIconFile=C:\Users\m-kat\Downloads\DGK_Connect_py\icon.ico
+SetupIconFile=C:\Users\m-kat\Downloads\DGK-Connect-ver.1.0\DGK-Connect-ver.1.0\icon.ico
 Compression=lzma
 SolidCompression=yes
 WizardStyle=modern
@@ -44,8 +44,8 @@ Name: "japanese"; MessagesFile: "compiler:Languages\Japanese.isl"
 Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked
 
 [Files]
-Source: "C:\Users\m-kat\Downloads\DGK_Connect\{#MyAppExeName}"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\m-kat\Downloads\DGK_Connect\background.jpg"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\m-kat\Downloads\DGK-Connect-ver.1.0\{#MyAppExeName}"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\m-kat\Downloads\DGK-Connect-ver.1.0\background.jpg"; DestDir: "{app}"; Flags: ignoreversion
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
 [Icons]

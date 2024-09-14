@@ -1,0 +1,1 @@
+pyinstaller --onefile --icon=icon.ico --add-data="./background.jpg;." DGK_Connect.py
